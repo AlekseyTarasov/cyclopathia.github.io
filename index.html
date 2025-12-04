@@ -1,0 +1,32 @@
+---
+layout: default
+---
+{% include slider.html %}
+
+<section class="site-main">
+    <div class="site-container">
+        <div class="site-row">
+            <div class="site-content">
+                <div class="posts-grid">
+                    {% for post in paginator.posts %}
+                        {% include post-preview.html %}
+                    {% endfor %}
+                </div>
+                
+                {% if paginator.total_pages > 1 %}
+                <nav class="pagination">
+                    {% if paginator.previous_page %}
+                    <a href="{{ paginator.previous_page_path | relative_url }}" class="prev">← Новее</a>
+                    {% endif %}
+                    
+                    <span class="page-number">Страница {{ paginator.page }} из {{ paginator.total_pages }}</span>
+                    
+                    {% if paginator.next_page %}
+                    <a href="{{ paginator.next_page_path | relative_url }}" class="next">Старее →</a>
+                    {% endif %}
+                </nav>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
