@@ -1,0 +1,35 @@
+<footer id="site-footer" class="site-footer">
+    <div class="site-footer-top">
+        <div class="site-container">
+            <div class="site-row">
+                <div class="site-column">
+                    <h6>Свежие записи</h6>
+                    <ul>
+                        {% for post in site.posts limit:5 %}
+                        <li>
+                            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                
+                <div class="site-column">
+                    <h6>Рубрики</h6>
+                    <ul>
+                        {% for category in site.categories %}
+                        <li>
+                            <a href="{{ site.baseurl }}/category/{{ category[0] | slugify }}/">{{ category[0] }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="site-footer-bottom">
+        <div class="site-container text-center">
+            <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}</p>
+        </div>
+    </div>
+</footer>
