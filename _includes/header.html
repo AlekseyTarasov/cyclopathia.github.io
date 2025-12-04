@@ -1,0 +1,35 @@
+<header id="site-header" class="site-header">
+    <div class="site-header-top">
+        <div class="site-container">
+            <div class="site-row">
+                <div class="site-header-top-right">
+                    <nav class="social-navigation">
+                        <ul>
+                            {% if site.social.facebook %}
+                            <li><a href="{{ site.social.facebook }}" target="_blank">Facebook</a></li>
+                            {% endif %}
+                            {% if site.social.instagram %}
+                            <li><a href="{{ site.social.instagram }}" target="_blank">Instagram</a></li>
+                            {% endif %}
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="site-header-bottom">
+        <div class="site-container">
+            <div class="site-row">
+                <div class="site-header-center">
+                    <div class="site-logo">
+                        <h1>
+                            <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+                        </h1>
+                        <p class="site-description">{{ site.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
