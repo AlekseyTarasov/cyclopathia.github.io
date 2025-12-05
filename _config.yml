@@ -23,3 +23,8 @@ social:
 slider:
   autoplay: true
   speed: 7000
+
+# Goatcounter analytics
+goatcounter:
+  code: "ваш-код"  # Замените на ваш код из goatcounter (например: cyclopathia)
+  # URL будет: https://ваш-код.goatcounter.com
